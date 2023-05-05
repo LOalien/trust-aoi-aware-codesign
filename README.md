@@ -1,4 +1,4 @@
-# Trust prediction based on GAN and DNN
+# Trust-AoI Aware Codesign based on GAN and DNN
 
 This project provides an open-source implementation of a paper titled "Trust-AoI Aware Codesign of Scheduling and Control for Edge-enabled IIoT Systems". The aim of the project is to provide a working example of the concepts presented in the paper, and to serve as a reference for researchers and students interested in the field.
 
@@ -23,17 +23,18 @@ This project requires the following software to be installed on your machine:
 ### Running the project
 
 1. Open a terminal window and navigate to the root of the project
-2. Run `python ganDNN.py` to run the default script
+2. Run `python offline_train_gan_dnn.py` to run the default script
+3. Run `Trust_aoi_aware_codesign.m` in MATLAB to run TACS.
 
 ## Project structure
 
 The project contains the following files and directories:
 
-- `ganDNN.py`: The default script that trains and evaluates the GAN model
+- `offline_train_gan_dnn.py`: The default script that trains and evaluates the GAN model
 - `*.csv`: The dataset used for training the model
 - `README.md`: This file
 - `models/`: A directory containing saved model
-- `results/`: A directory containing evaluation results and generated samples
+- `datasets/`: A directory containing datasets
 
 ## License
 
