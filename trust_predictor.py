@@ -46,7 +46,7 @@ input_data_one = np.array(input_data)
 # Convert the numpy array to a tensor
 input_data_one = np.reshape(input_data_one, (1,len(input_data_one)))
 # Load the pre-trained DNN model
-trust_model = load_model('./TensorFlow/premodel1025.h5', compile=True,custom_objects={'metric_F1score': metric_F1score,'metric_FPR':metric_FPR,'metric_FNR':metric_FNR})
+trust_model = load_model('./model/premodel1025.h5', compile=True,custom_objects={'metric_F1score': metric_F1score,'metric_FPR':metric_FPR,'metric_FNR':metric_FNR})
 
 # Make predictions on the input data            
 trust_pred = trust_model.predict(input_data_one)

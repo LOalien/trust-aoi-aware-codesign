@@ -63,7 +63,7 @@ gan = keras.models.Model(gan_input, gan_output)
 gan.compile(loss='binary_crossentropy',optimizer='rmsprop')
 gan.summary()
 #Loading and normalizing the data:
-td = pd.read_csv('real_dataset_1025.csv',usecols=[1, 2, 3,4])
+td = pd.read_csv('./datasets/real_dataset_1025.csv',usecols=[1, 2, 3,4])
 real_point = (td-np.nanmin(td))/(np.nanmax(td)-np.nanmin(td)) 
 num_rows, num_cols = real_point.shape
 #Training the generator and discriminator:
@@ -101,7 +101,7 @@ for step in range(epochs):
 random_input = np.random.normal(size=(10000, 4)) 
 
 # load 1000 real data for DNN training
-td = pd.read_csv('realtrainingdata_1025.csv',usecols=[1, 2, 3,4])
+td = pd.read_csv('./datasets/realtrainingdata_1025.csv',usecols=[1, 2, 3,4])
 realdata1000 = (td-np.nanmin(td))/(np.nanmax(td)-np.nanmin(td))
 PreInput=G.predict(random_input)
 traindata = np.concatenate([PreInput,realdata1000])
@@ -121,7 +121,7 @@ PreTrust.summary()
 history=PreTrust.fit(traindata,trainlabel,epochs=100)
 print(history)
 # load 1000 real data for DNN testing
-testdata = pd.read_csv('testdata_1025.csv',usecols=[1, 2, 3,4])
+testdata = pd.read_csv('./datasets/testdata_1025.csv',usecols=[1, 2, 3,4])
 tdata = (testdata-np.nanmin(testdata))/(np.nanmax(testdata)-np.nanmin(testdata))
 testlabel = np.concatenate([np.zeros((500,1)),np.ones((500,1))])
 # print results
