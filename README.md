@@ -16,7 +16,7 @@ This project requires the following software to be installed on your machine:
 
 ### Installing
 
-1. Clone the repository to your local machine: `git clone https://github.com/your-username/your-repository.git`
+1. Clone the repository to your local machine: `git clone https://github.com/LOalien/trust-aoi-aware-codesign.git`
 2. Open a terminal window and navigate to the root of the project
 3. Run `pip install -r requirements.txt` to install the required dependencies
 
